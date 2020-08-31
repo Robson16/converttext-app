@@ -1,0 +1,59 @@
+:root {
+    --color-background: #F0F0F7;
+    --color-primary: #1F4A8f;
+    --color-primary-lighter: #507DC7;
+    --color-primary-light: #3A67B0;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #FFFFFF;
+    --color-text-title: #333333;
+    --color-text-complement: #CCCCCC;
+    --color-text-base: #333333;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #F8F8FC;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+
+    font-size: 60%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100vh;
+}
+
+body {
+    background: var(--color-background);
+}
+
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+    font: 500 1.6rem Ubuntu;
+    color: var(--color-text-base);
+}
+
+.container {
+    width: 90vw;
+    max-width: 1140px;
+}
+
+@media (min-width: 700px) {
+    :root {
+        font-size: 62.5%;
+    }
+}

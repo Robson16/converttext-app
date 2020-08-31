@@ -1,0 +1,11 @@
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .actions {
+        justify-content: flex-start;
+    }
+}
