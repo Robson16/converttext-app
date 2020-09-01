@@ -1,13 +1,13 @@
 .btn-default {
-    margin: 0 .75rem 1.5rem 0;
-    padding: 1.5rem;
-    border: none;
-    border-radius: 0;
-    color: var(--color-button-text);
-    background: var(--color-primary);
+  margin: 0 0.75rem 1.5rem 0;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0;
+  color: var(--color-button-text);
+  background: var(--color-primary);
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    background: var(--color-primary-light);
+  background: var(--color-primary-light);
 }
