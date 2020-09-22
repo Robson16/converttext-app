@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/converttext-app/static/css/main.765ed4a0.chunk.css",
+    "main.js": "/converttext-app/static/js/main.493362f3.chunk.js",
+    "main.js.map": "/converttext-app/static/js/main.493362f3.chunk.js.map",
+    "runtime-main.js": "/converttext-app/static/js/runtime-main.f7e5f890.js",
+    "runtime-main.js.map": "/converttext-app/static/js/runtime-main.f7e5f890.js.map",
+    "static/js/2.60831ab9.chunk.js": "/converttext-app/static/js/2.60831ab9.chunk.js",
+    "static/js/2.60831ab9.chunk.js.map": "/converttext-app/static/js/2.60831ab9.chunk.js.map",
+    "index.html": "/converttext-app/index.html",
+    "precache-manifest.318a4b1b908b0a3bd322f2599f657f73.js": "/converttext-app/precache-manifest.318a4b1b908b0a3bd322f2599f657f73.js",
+    "service-worker.js": "/converttext-app/service-worker.js",
+    "static/css/main.765ed4a0.chunk.css.map": "/converttext-app/static/css/main.765ed4a0.chunk.css.map",
+    "static/js/2.60831ab9.chunk.js.LICENSE.txt": "/converttext-app/static/js/2.60831ab9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f7e5f890.js",
+    "static/js/2.60831ab9.chunk.js",
+    "static/css/main.765ed4a0.chunk.css",
+    "static/js/main.493362f3.chunk.js"
+  ]
+}
