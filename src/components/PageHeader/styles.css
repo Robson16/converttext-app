@@ -27,7 +27,7 @@
 
 .page-header .header-content {
   position: relative;
-  margin: 3.2rem 0;
+  margin: 1.6rem 0;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -43,5 +43,5 @@
   font-size: 1.6rem;
   line-height: 2.6rem;
   color: var(--color-text-in-primary);
-  margin-top: 2.4rem;
+  margin-top: 1.2rem;
 }
