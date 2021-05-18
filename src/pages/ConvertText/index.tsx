@@ -19,9 +19,13 @@ function ConvertText() {
   }
 
   function convertToCapitalizedCase(text: string) {
-    return text.replace(/(?:^|\s)\S/g, (character) => {
-      return character.toUpperCase();
-    });
+    return text
+      .toLocaleLowerCase()
+      .split(" ")
+      .map((word: string) => {
+        return word.charAt(0).toUpperCase() + word.substring(1);
+      })
+      .join(" ");
   }
 
   function convertToAlternatingCase(text: string) {
