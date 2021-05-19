@@ -56,7 +56,7 @@ function ConvertText() {
     return text
       .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
       .replace(/[.-]/g, ' ')
-      .replace(/[&\/\\#,+()$~%'":*?<>{}–]/g, '')
+      .replace(/[&\/\\#,+()$~%'":*?<>{}–’]/g, '')
       .replace(/\s\s+/g, ' ')
       .toLowerCase()
       .split(" ")
