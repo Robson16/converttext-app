@@ -52,6 +52,17 @@ function ConvertText() {
       .join("");
   }
 
+  function convertToUrlCase(text: string) {
+    return text
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/[.-]/g, ' ')
+      .replace(/[&\/\\#,+()$~%'":*?<>{}–]/g, '')
+      .replace(/\s\s+/g, ' ')
+      .toLowerCase()
+      .split(" ")
+      .join("-");
+  }
+
   function handleSentenceCase() {
     setText(convertToSentenceCase(text));
     setPlaceholder(convertToSentenceCase(placeholder));
@@ -80,6 +91,11 @@ function ConvertText() {
   function handleInverseCase() {
     setText(convertToInverseCase(text));
     setPlaceholder(convertToInverseCase(placeholder));
+  }
+
+  function handleUrlCase() {
+    setText(convertToUrlCase(text));
+    setPlaceholder(convertToUrlCase(placeholder));
   }
 
   function handleCopy() {
@@ -118,6 +134,7 @@ function ConvertText() {
           />
         </form>
         <div className="actions">
+          <ButtonDefault text="formato-url" onClick={handleUrlCase} />
           <ButtonDefault text="Formato frase" onClick={handleSentenceCase} />
           <ButtonDefault
             text="Palavras Capitalizada"
