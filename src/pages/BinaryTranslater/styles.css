@@ -10,7 +10,7 @@
   flex: 2;
 }
 
-#page-convert-binary .textarea-block + .textarea-block {
+#page-convert-binary .textarea-block+.textarea-block {
   margin-top: 0;
 }
 

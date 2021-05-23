@@ -6,6 +6,7 @@ App com funções para manipulação de textos:
 
 ## 1 - Conversor de Textos
 
+- Formato de URL link;
 - Formato de frase;
 - Palavras capitalizadas;
 - Maiúsculas;
