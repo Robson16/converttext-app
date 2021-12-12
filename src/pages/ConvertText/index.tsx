@@ -28,13 +28,13 @@ const ConvertText: React.FC = () => {
   }, [text, placeholder]);
 
   const handleUpperCase = useCallback(() => {
-    setText(text.toUpperCase());
-    setPlaceholder(placeholder.toUpperCase());
+    setText(text.trim().toUpperCase());
+    setPlaceholder(placeholder.trim().toUpperCase());
   }, [text, placeholder]);
 
   const handleLowerCase = useCallback(() => {
-    setText(text.toLowerCase());
-    setPlaceholder(placeholder.toLowerCase());
+    setText(text.trim().toLowerCase());
+    setPlaceholder(placeholder.trim().toLowerCase());
   }, [text, placeholder]);
 
   const handleAlternatingCase = useCallback(() => {

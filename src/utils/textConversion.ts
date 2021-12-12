@@ -1,11 +1,12 @@
 export function convertToSentenceCase(text: string): string {
-  return text.replace(/.+?([.?!]\s|$)/g, txt => {
-    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  return text.trim().replace(/.+?([.?!]\s|$)/g, txt => {
+    return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();
   });
 }
 
 export function convertToCapitalizedCase(text: string): string {
   return text
+    .trim()
     .toLocaleLowerCase()
     .split(' ')
     .map((word: string) => {
@@ -16,6 +17,7 @@ export function convertToCapitalizedCase(text: string): string {
 
 export function convertToAlternatingCase(text: string): string {
   return text
+    .trim()
     .split('')
     .map((character: string, index: number) => {
       return index % 2 === 0
@@ -27,6 +29,7 @@ export function convertToAlternatingCase(text: string): string {
 
 export function convertToInverseCase(text: string): string {
   return text
+    .trim()
     .split('')
     .map((character: string) => {
       if (character === character.toUpperCase()) {
@@ -39,6 +42,7 @@ export function convertToInverseCase(text: string): string {
 
 export function convertToUrlCase(text: string): string {
   return text
+    .trim()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[.-]/g, ' ')
