@@ -1,5 +1,4 @@
 import React, { ButtonHTMLAttributes } from 'react';
-
 import './styles.css';
 
 interface ButtonDefaultProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -8,10 +7,10 @@ interface ButtonDefaultProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const ButtonDefault: React.FC<ButtonDefaultProps> = ({ text, ...rest }) => {
   return (
-    <button className="btn-default" {...rest}>
+    <button type="button" className="btn-default" {...rest}>
       {text}
     </button>
   );
-}
+};
 
 export default ButtonDefault;

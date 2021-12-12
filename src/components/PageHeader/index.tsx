@@ -1,14 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
-import "./styles.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './styles.css';
 
 interface PageHeaderProps {
   title: string;
-  description?: string;
+  description: string;
 }
 
-const PageHeader: React.FC<PageHeaderProps> = (props) => {
+const PageHeader: React.FC<PageHeaderProps> = ({
+  children,
+  title,
+  description,
+}) => {
   return (
     <header className="page-header">
       <div className="top-bar-container">
@@ -16,10 +19,10 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
         <Link to="/binary-translator">Tradutor Binário</Link>
       </div>
       <div className="header-content">
-        <h1>{props.title}</h1>
-        {props.description && <p>{props.description}</p>}
+        <h1>{title}</h1>
+        {description && <p>{description}</p>}
 
-        {props.children}
+        {children}
       </div>
     </header>
   );

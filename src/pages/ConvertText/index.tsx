@@ -1,117 +1,71 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from 'react';
+import ButtonDefault from '../../components/ButtonDefault';
+import PageHeader from '../../components/PageHeader';
+import Textarea from '../../components/Textarea';
+import {
+  convertToAlternatingCase,
+  convertToCapitalizedCase,
+  convertToInverseCase,
+  convertToSentenceCase,
+  convertToUrlCase,
+} from '../../utils/textConversion';
+import './styles.css';
 
-import PageHeader from "../../components/PageHeader";
-import Textarea from "../../components/Textarea";
-import ButtonDefault from "../../components/ButtonDefault";
-
-import "./styles.css";
-
-function ConvertText() {
+const ConvertText: React.FC = () => {
   const [placeholder, setPlaceholder] = useState(
-    "Digite ou cole seu texto aqui"
+    'Digite ou cole seu texto aqui',
   );
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
 
-  function convertToSentenceCase(text: string) {
-    return text.replace(/.+?([.?!]\s|$)/g, (txt) => {
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-  }
-
-  function convertToCapitalizedCase(text: string) {
-    return text
-      .toLocaleLowerCase()
-      .split(" ")
-      .map((word: string) => {
-        return word.charAt(0).toUpperCase() + word.substring(1);
-      })
-      .join(" ");
-  }
-
-  function convertToAlternatingCase(text: string) {
-    return text
-      .split("")
-      .map((character: string, index: number) => {
-        return index % 2 === 0
-          ? character.toLowerCase()
-          : character.toUpperCase();
-      })
-      .join("");
-  }
-
-  function convertToInverseCase(text: string) {
-    return text
-      .split("")
-      .map((character: string, index: number) => {
-        if (character === character.toUpperCase()) {
-          return character.toLowerCase();
-        } else {
-          return character.toUpperCase();
-        }
-      })
-      .join("");
-  }
-
-  function convertToUrlCase(text: string) {
-    return text
-      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-      .replace(/[.-]/g, ' ')
-      .replace(/[&\/\\#,+()$~%'":*?<>{}–’]/g, '')
-      .replace(/\s\s+/g, ' ')
-      .toLowerCase()
-      .split(" ")
-      .join("-");
-  }
-
-  function handleSentenceCase() {
+  const handleSentenceCase = useCallback(() => {
     setText(convertToSentenceCase(text));
     setPlaceholder(convertToSentenceCase(placeholder));
-  }
+  }, [text, placeholder]);
 
-  function handleCapitalizedCase() {
+  const handleCapitalizedCase = useCallback(() => {
     setText(convertToCapitalizedCase(text));
     setPlaceholder(convertToCapitalizedCase(placeholder));
-  }
+  }, [text, placeholder]);
 
-  function handleUpperCase() {
+  const handleUpperCase = useCallback(() => {
     setText(text.toUpperCase());
     setPlaceholder(placeholder.toUpperCase());
-  }
+  }, [text, placeholder]);
 
-  function handleLowerCase() {
+  const handleLowerCase = useCallback(() => {
     setText(text.toLowerCase());
     setPlaceholder(placeholder.toLowerCase());
-  }
+  }, [text, placeholder]);
 
-  function handleAlternatingCase() {
+  const handleAlternatingCase = useCallback(() => {
     setText(convertToAlternatingCase(text));
     setPlaceholder(convertToAlternatingCase(placeholder));
-  }
+  }, [text, placeholder]);
 
-  function handleInverseCase() {
+  const handleInverseCase = useCallback(() => {
     setText(convertToInverseCase(text));
     setPlaceholder(convertToInverseCase(placeholder));
-  }
+  }, [text, placeholder]);
 
-  function handleUrlCase() {
+  const handleUrlCase = useCallback(() => {
     setText(convertToUrlCase(text));
     setPlaceholder(convertToUrlCase(placeholder));
-  }
+  }, [text, placeholder]);
 
-  function handleCopy() {
+  const handleCopy = useCallback(() => {
     navigator.clipboard.writeText(text).then(
       () => {
-        console.log("copy success");
+        console.log('copy success');
       },
-      (error) => {
+      error => {
         console.log(error);
-      }
+      },
     );
-  }
+  }, [text]);
 
-  function handleClear() {
-    setText("");
-  }
+  const handleClear = useCallback(() => {
+    setText('');
+  }, []);
 
   return (
     <div id="page-convert-text" className="container">
@@ -127,7 +81,7 @@ function ConvertText() {
             label="Digite seu texto e escolha o tipo de formato que deseja converter."
             placeholder={placeholder}
             value={text}
-            onChange={(e) => {
+            onChange={e => {
               setText(e.target.value);
             }}
             autoFocus
@@ -153,6 +107,6 @@ function ConvertText() {
       </main>
     </div>
   );
-}
+};
 
 export default ConvertText;

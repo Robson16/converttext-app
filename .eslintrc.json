@@ -7,6 +7,7 @@
     "plugin:react/recommended",
     "airbnb",
     "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -34,11 +35,22 @@
         ]
       }
     ],
+    "import/prefer-default-export": "off",
+    "camelcase": "off",
+    "@typescript-eslint/ban-types": "off",
+    "no-console": "off",
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error"
+    "no-unused-expressions": "off",
+    "prettier/prettier": "error",
+    "react/prop-types": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true
+      }
     ],
-    "react/react-in-jsx-scope": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -46,8 +58,7 @@
         "ts": "never",
         "tsx": "never"
       }
-    ],
-    "prettier/prettier": "error"
+    ]
   },
   "settings": {
     "import/resolver": {
