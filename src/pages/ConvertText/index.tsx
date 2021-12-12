@@ -1,4 +1,6 @@
 import React, { useCallback, useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import ButtonDefault from '../../components/ButtonDefault';
 import PageHeader from '../../components/PageHeader';
 import Textarea from '../../components/Textarea';
@@ -55,10 +57,10 @@ const ConvertText: React.FC = () => {
   const handleCopy = useCallback(() => {
     navigator.clipboard.writeText(text).then(
       () => {
-        console.log('copy success');
+        toast.success('Copiado para sua área de transferência');
       },
       error => {
-        console.log(error);
+        toast.error(error);
       },
     );
   }, [text]);
