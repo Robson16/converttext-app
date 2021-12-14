@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import './assets/styles/global.css';
 import BinaryTranslater from './pages/BinaryTranslater';
@@ -7,13 +7,12 @@ import ConvertText from './pages/ConvertText';
 
 const App: React.FC = () => {
   return (
-    <>
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<ConvertText />} />
-          <Route path="/binary-translator" element={<BinaryTranslater />} />
-        </Routes>
-      </HashRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ConvertText />} />
+        <Route path="/binary-translator" element={<BinaryTranslater />} />
+      </Routes>
+
       <ToastContainer
         theme="colored"
         position="top-right"
@@ -26,7 +25,7 @@ const App: React.FC = () => {
         draggable
         pauseOnHover
       />
-    </>
+    </BrowserRouter>
   );
 };
 
