@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import PageHeader from '../../components/PageHeader';
+import Header from '../../components/Header';
 import Textarea from '../../components/Textarea';
 import {
   convertBinaryToText,
   convertTextToBinary,
 } from '../../utils/textConversion';
-import './styles.css';
+import { Container } from './styles';
 
 const BinaryTranslator: React.FC = () => {
   const placeholder = 'Digite ou cole seu texto aqui';
@@ -30,12 +30,14 @@ const BinaryTranslator: React.FC = () => {
   }, [binary]);
 
   return (
-    <div id="page-convert-binary" className="container">
-      <PageHeader
-        title="Tradutor Binário"
-        description="Quer saber como fica seu texto em binário? Ou converter um binário para texto?"
-      />
-
+    <Container>
+      <Header>
+        <h1>Tradutor Binário</h1>
+        <p>
+          Quer saber como fica seu texto em binário? Ou converter um binário
+          para texto?
+        </p>
+      </Header>
       <main>
         <form>
           <Textarea
@@ -57,7 +59,7 @@ const BinaryTranslator: React.FC = () => {
           />
         </form>
       </main>
-    </div>
+    </Container>
   );
 };
 

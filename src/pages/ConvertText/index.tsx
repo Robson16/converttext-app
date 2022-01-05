@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ButtonDefault from '../../components/ButtonDefault';
-import PageHeader from '../../components/PageHeader';
+import Button from '../../components/Button';
+import Header from '../../components/Header';
 import Textarea from '../../components/Textarea';
 import {
   convertToAlternatingCase,
@@ -11,7 +11,7 @@ import {
   convertToSentenceCase,
   convertToUrlCase,
 } from '../../utils/textConversion';
-import './styles.css';
+import { Container, Actions } from './styles';
 
 const ConvertText: React.FC = () => {
   const [placeholder, setPlaceholder] = useState(
@@ -70,12 +70,14 @@ const ConvertText: React.FC = () => {
   }, []);
 
   return (
-    <div id="page-convert-text" className="container">
-      <PageHeader
-        title="Conversor de texto"
-        description="Você já digitou um texto e só então percebeu que estava todo em MAIÚSCULAS? Não se preocupe, você não precisa digitar tudo novamente!"
-      />
-
+    <Container>
+      <Header>
+        <h1>Conversor de texto</h1>
+        <p>
+          Você já digitou um texto e só então percebeu que estava todo em
+          MAIÚSCULAS? Não se preocupe, você não precisa digitar tudo novamente!
+        </p>
+      </Header>
       <main>
         <form>
           <Textarea
@@ -89,25 +91,19 @@ const ConvertText: React.FC = () => {
             autoFocus
           />
         </form>
-        <div className="actions">
-          <ButtonDefault text="formato-url" onClick={handleUrlCase} />
-          <ButtonDefault text="Formato frase" onClick={handleSentenceCase} />
-          <ButtonDefault
-            text="Palavras Capitalizada"
-            onClick={handleCapitalizedCase}
-          />
-          <ButtonDefault text="MAIÚSCULAS" onClick={handleUpperCase} />
-          <ButtonDefault text="minúsculas" onClick={handleLowerCase} />
-          <ButtonDefault
-            text="lEtRaS AlTeRnAdAs"
-            onClick={handleAlternatingCase}
-          />
-          <ButtonDefault text="InVeRtEr lEtRaS" onClick={handleInverseCase} />
-          <ButtonDefault text="Copiar" onClick={handleCopy} />
-          <ButtonDefault text="Limpar" onClick={handleClear} />
-        </div>
+        <Actions>
+          <Button onClick={handleUrlCase}>formato-url</Button>
+          <Button onClick={handleSentenceCase}>Formato frase</Button>
+          <Button onClick={handleCapitalizedCase}>Palavras Capitalizada</Button>
+          <Button onClick={handleUpperCase}>MAIÚSCULAS</Button>
+          <Button onClick={handleLowerCase}>minúsculas</Button>
+          <Button onClick={handleAlternatingCase}>lEtRaS AlTeRnAdAs</Button>
+          <Button onClick={handleInverseCase}>InVeRtEr lEtRaS</Button>
+          <Button onClick={handleCopy}>Copiar</Button>
+          <Button onClick={handleClear}>Limpar</Button>
+        </Actions>
       </main>
-    </div>
+    </Container>
   );
 };
 
