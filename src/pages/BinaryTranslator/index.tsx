@@ -7,7 +7,7 @@ import {
 } from '../../utils/textConversion';
 import './styles.css';
 
-const BinaryTranslater: React.FC = () => {
+const BinaryTranslator: React.FC = () => {
   const placeholder = 'Digite ou cole seu texto aqui';
 
   const [text, setText] = useState('');
@@ -61,4 +61,4 @@ const BinaryTranslater: React.FC = () => {
   );
 };
 
-export default BinaryTranslater;
+export default BinaryTranslator;
