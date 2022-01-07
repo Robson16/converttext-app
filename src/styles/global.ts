@@ -39,13 +39,8 @@ export default createGlobalStyle`
   }
 
   #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90vw;
-    max-width: 1140px;
     margin: 0 auto;
-    padding-top: 1rem;
+    width: 90vw;
 
     @media (min-width: 700px) {
       font-size: 62.5%;
