@@ -1,15 +1,14 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import { ThemeProvider } from 'styled-components';
 import Navbar from './components/Navbar';
+import { AppProvider } from './context/AppContext';
 import Routes from './routes';
 import GlobalStyle from './styles/global';
-import light from './styles/themes/light';
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={light}>
+    <AppProvider>
       <BrowserRouter>
         <Navbar />
         <Routes />
@@ -27,7 +26,7 @@ const App: React.FC = () => {
           pauseOnHover
         />
       </BrowserRouter>
-    </ThemeProvider>
+    </AppProvider>
   );
 };
 
