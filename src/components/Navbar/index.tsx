@@ -3,11 +3,11 @@ import React, { useContext } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { FiSun, FiMoon } from 'react-icons/fi';
-import { AppContext } from '../../context/AppContext';
+import { useTheme } from '../../hooks/useTheme';
 import { Container, NavGrid, NavLink } from './styles';
 
 const Navbar: React.FC = () => {
-  const { toggleTheme } = useContext(AppContext);
+  const { toggleTheme } = useTheme();
   const { colors, title } = useContext(ThemeContext);
 
   return (
