@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
-  margin-bottom: 3rem;
 
   label {
     font-size: 1.6rem;

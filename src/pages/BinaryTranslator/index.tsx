@@ -1,33 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from '../../components/Header';
 import Textarea from '../../components/Textarea';
-import {
-  convertBinaryToText,
-  convertTextToBinary,
-} from '../../utils/textConversion';
-import { Container } from './styles';
+import { useTextConverter } from '../../hooks/useTextConverter';
+import { Container, Form } from './styles';
 
 const BinaryTranslator: React.FC = () => {
-  const placeholder = 'Digite ou cole seu texto aqui';
-
-  const [text, setText] = useState('');
-  const [binary, setBinary] = useState('');
-
-  useEffect(() => {
-    if (text.length) {
-      setBinary(convertTextToBinary(text));
-    } else {
-      setBinary(convertTextToBinary(placeholder));
-    }
-  }, [text]);
-
-  useEffect(() => {
-    if (!binary.length || binary === convertTextToBinary(placeholder)) {
-      setText('');
-    } else {
-      setText(convertBinaryToText(binary));
-    }
-  }, [binary]);
+  const {
+    placeholder,
+    text,
+    binary,
+    countLetter,
+    countWord,
+    countLine,
+    handleTextInput,
+    handleBinaryInput,
+  } = useTextConverter();
 
   return (
     <Container>
@@ -39,25 +26,32 @@ const BinaryTranslator: React.FC = () => {
         </p>
       </Header>
       <main>
-        <form>
+        <Form>
           <Textarea
             name="text"
             label="Texto"
             placeholder={placeholder}
             value={text}
-            onChange={e => {
-              setText(e.target.value);
+            onChange={event => {
+              handleTextInput(event.target.value);
             }}
           />
           <Textarea
             name="binary"
             label="Binário"
             value={binary}
-            onChange={e => {
-              setBinary(e.target.value);
+            onChange={event => {
+              handleBinaryInput(event.target.value);
             }}
           />
-        </form>
+        </Form>
+        <p>
+          {`
+          Contagem de letras: ${countLetter} |
+          Contagem de palavras: ${countWord} |
+          Contagem de linhas: ${countLine}
+          `}
+        </p>
       </main>
     </Container>
   );

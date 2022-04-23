@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar';
-import { AppProvider } from './context/AppContext';
+import AppProvider from './hooks';
 import Routes from './routes';
 import GlobalStyle from './styles/global';
 
