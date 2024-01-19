@@ -1,6 +1,6 @@
 # Convert Text App
 
-[Live Demo](https://converttext-app.vercel.app/)
+[Live Demo](https://converttext.vercel.app/)
 
 App com funções para manipulação de textos:
 
