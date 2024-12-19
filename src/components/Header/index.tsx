@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Container } from './styles';
 
-const Header: React.FC = ({ children }) => {
+interface HeaderProps {
+  children: ReactNode;
+}
+
+const Header: React.FC<HeaderProps> = ({ children }) => {
   return <Container>{children}</Container>;
 };
 

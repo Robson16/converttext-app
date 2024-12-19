@@ -1,5 +1,6 @@
 import React, {
   createContext,
+  ReactNode,
   useCallback,
   useContext,
   useEffect,
@@ -36,11 +37,15 @@ interface TextConverterContextData {
   handleClear(): void;
 }
 
+interface TextConverterProps {
+  children: ReactNode;
+}
+
 const TextConverterContext = createContext<TextConverterContextData>(
   {} as TextConverterContextData,
 );
 
-const TextConverterProvider: React.FC = ({ children }) => {
+const TextConverterProvider: React.FC<TextConverterProps> = ({ children }) => {
   const initialPlaceholder = 'Digite ou cole seu texto aqui';
 
   const [placeholder, setPlaceholder] = useState(initialPlaceholder);
