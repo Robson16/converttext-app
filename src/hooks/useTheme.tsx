@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useContext } from 'react';
+import React, { ReactNode, createContext, useCallback, useContext } from 'react';
 import {
   DefaultTheme,
   ThemeProvider as StyledComponentThemeProvider,
@@ -7,13 +7,17 @@ import dark from '../styles/themes/dark';
 import light from '../styles/themes/light';
 import usePersistentState from './usePersistedState';
 
+interface ThemeProviderProps {
+  children: ReactNode;
+}
+
 interface ThemeContextData {
   toggleTheme(): void;
 }
 
 const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData);
 
-const ThemeProvider: React.FC = ({ children }) => {
+const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = usePersistentState<DefaultTheme>(
     'converttext-theme',
     light,

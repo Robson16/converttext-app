@@ -8,7 +8,13 @@ import { Container, NavGrid, NavLink } from './styles';
 
 const Navbar: React.FC = () => {
   const { toggleTheme } = useTheme();
-  const { colors, title } = useContext(ThemeContext);
+  const themeContext = useContext(ThemeContext);
+
+  if (!themeContext) {
+    return null;
+  }
+
+  const { colors, title } = themeContext;
 
   return (
     <Container>
@@ -29,14 +35,12 @@ const Navbar: React.FC = () => {
           checked={title === 'dark'}
           checkedIcon={false}
           uncheckedIcon={false}
-          // eslint-disable-next-line prettier/prettier
           checkedHandleIcon={(
             <FiMoon
               size={20}
               color={colors.background}
               style={{ margin: '3px' }}
             />
-            // eslint-disable-next-line prettier/prettier
           )}
           uncheckedHandleIcon={<FiSun size={18} style={{ margin: '4px' }} />}
           onColor={colors.primary}
