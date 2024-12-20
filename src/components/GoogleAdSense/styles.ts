@@ -7,7 +7,8 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
   display: flex;
   justify-content: center;
-  min-width: 100%;
+  width: 100%;
+  min-width: 300px;
 
   ${({customStyle}) =>
     customStyle &&
