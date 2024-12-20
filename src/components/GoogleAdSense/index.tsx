@@ -13,29 +13,34 @@ const GoogleAdSense: React.FC<GoogleAdProps> = ({
   adClient,
   adSlot,
   adFormat = "auto",
-  dataFullWidthResponsive = true,
+  dataFullWidthResponsive = "true",
   style
 }) => {
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.error("AdSense error:", e);
+    const adContainer = document.querySelector(".adsbygoogle");
+
+    if (adContainer && window.adsbygoogle) {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.error("AdSense error:", e);
+      }
     }
   }, []);
 
   return (
-    <Container customStyle={style}>
+    <Container>
       <ins
         className="adsbygoogle"
-        style={{ display: "block" }}
+        style={style}
         data-ad-client={adClient}
         data-ad-slot={adSlot}
         data-ad-format={adFormat}
         data-full-width-responsive={dataFullWidthResponsive}
-      />
+      >
+      </ins>
     </Container>
   );
-}
+};
 
 export default GoogleAdSense;

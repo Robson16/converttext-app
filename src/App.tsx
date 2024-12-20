@@ -22,12 +22,14 @@ const App: React.FC = () => {
     <AppProvider>
       <BrowserRouter>
         <GoogleAdSense
+          style={{ display: 'inline-block', width: '960px', height: '90px' }}
           adClient={adClient}
           adSlot={adSlotHeader}
         />
         <Navbar />
         <Routes />
         <GoogleAdSense
+          style={{ display: 'inline-block', width: '960px', height: '90px' }}
           adClient={adClient}
           adSlot={adSlotFooter}
         />
