@@ -1,16 +1,17 @@
 const theme = {
-  title: 'dark',
+  title: "dark",
 
   colors: {
-    background: '#30363D',
-    primary: '#3C444D',
-    titleInPrimary: '#ffffff',
-    textInPrimary: '#ffffff',
-    textTitle: '#ffffff',
-    textBase: '#ffffff',
-    inputText: '#747D88',
-    inputBackground: '#f8f8fc',
-    buttonText: '#f8f8fc',
+    background: "#30363D",
+    primary: "#3C444D",
+    titleInPrimary: "#ffffff",
+    textInPrimary: "#ffffff",
+    textTitle: "#ffffff",
+    textBase: "#ffffff",
+    inputText: "#f8f8fc",
+    inputPlaceholder: "#f8f8fc",
+    inputBackground: "#747D88",
+    buttonText: "#f8f8fc",
   },
 };
 

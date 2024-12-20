@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import {createGlobalStyle} from "styled-components";
 
 export default createGlobalStyle`
   :root {
@@ -18,7 +18,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${props => props.theme.colors.background};
+    background: ${(props) => props.theme.colors.background};
   }
 
   div,
@@ -35,12 +35,16 @@ export default createGlobalStyle`
   input,
   button,
   textarea {
-    color: ${props => props.theme.colors.textBase};
+    color: ${(props) => props.theme.colors.textBase};
   }
 
   #root {
     margin: 0 auto;
-    width: 90vw;
+    padding: 1rem;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
     @media (min-width: 700px) {
       font-size: 62.5%;

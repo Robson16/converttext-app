@@ -1,5 +1,5 @@
-import { shade } from 'polished';
-import styled from 'styled-components';
+import {shade} from "polished";
+import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
@@ -15,11 +15,15 @@ export const Container = styled.div`
     height: 16rem;
     min-height: 15rem;
     font-size: 1.6rem;
-    color: ${props => props.theme.colors.inputText};
+    color: ${(props) => props.theme.colors.inputText};
     border-radius: 3px;
-    background: ${props => props.theme.colors.inputBackground};
+    background: ${(props) => props.theme.colors.inputBackground};
     border: 1px solid
-      ${props => shade(0.25, props.theme.colors.inputBackground)};
+      ${(props) => shade(0.25, props.theme.colors.inputBackground)};
     resize: vertical;
+
+    &::placeholder {
+      color: ${(props) => props.theme.colors.inputPlaceholder};
+    }
   }
 `;
