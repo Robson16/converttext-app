@@ -3,6 +3,7 @@ import Button from '../../components/Button';
 import Header from '../../components/Header';
 import Textarea from '../../components/Textarea';
 import { useTextConverter } from '../../hooks/useTextConverter';
+import { trackEvent } from '../../services/google-analytics/googleAnalytics';
 import { Actions, Container, Form } from './styles';
 
 const ConvertText: React.FC = () => {
@@ -54,15 +55,78 @@ const ConvertText: React.FC = () => {
           `}
         </p>
         <Actions>
-          <Button onClick={handleUrlCase}>formato-url</Button>
-          <Button onClick={handleSentenceCase}>Formato frase</Button>
-          <Button onClick={handleCapitalizedCase}>Palavras Capitalizada</Button>
-          <Button onClick={handleUpperCase}>MAIÚSCULAS</Button>
-          <Button onClick={handleLowerCase}>minúsculas</Button>
-          <Button onClick={handleAlternatingCase}>lEtRaS AlTeRnAdAs</Button>
-          <Button onClick={handleInverseCase}>InVeRtEr lEtRaS</Button>
-          <Button onClick={handleCopy}>Copiar</Button>
-          <Button onClick={handleClear}>Limpar</Button>
+          <Button
+            onClick={() => {
+              trackEvent("Conversor de Texto", "Clique", "Formato URL");
+              handleUrlCase();
+            }}
+          >
+            formato-url
+          </Button>
+          <Button
+            onClick={() => {
+              trackEvent("Conversor de Texto", "Clique", "Formato Frase");
+              handleSentenceCase();
+            }}
+          >
+            Formato frase
+          </Button>
+          <Button
+            onClick={() => {
+              trackEvent("Conversor de Texto", "Clique", "Palavras Capitalizada");
+              handleCapitalizedCase();
+            }}
+          >
+            Palavras Capitalizada
+          </Button>
+          <Button
+            onClick={() => {
+              trackEvent("Conversor de Texto", "Clique", "MAIÚSCULAS");
+              handleUpperCase();
+            }}
+          >
+            MAIÚSCULAS
+          </Button>
+          <Button
+            onClick={() => {
+              trackEvent("Conversor de Texto", "Clique", "minúsculas");
+              handleLowerCase();
+            }}
+          >
+            minúsculas
+          </Button>
+          <Button
+            onClick={() => {
+              trackEvent("Conversor de Texto", "Clique", "lEtRaS AlTeRnAdAs");
+              handleAlternatingCase();
+            }}
+          >
+            lEtRaS AlTeRnAdAs
+          </Button>
+          <Button
+            onClick={() => {
+              trackEvent("Conversor de Texto", "Clique", "InVeRtEr lEtRaS");
+              handleInverseCase();
+            }}
+          >
+            InVeRtEr lEtRaS
+          </Button>
+          <Button
+            onClick={() => {
+              trackEvent("Conversor de Texto", "Clique", "Copiar");
+              handleCopy();
+            }}
+          >
+            Copiar
+          </Button>
+          <Button
+            onClick={() => {
+              trackEvent("Conversor de Texto", "Clique", "Limpar");
+              handleClear();
+            }}
+          >
+            Limpar
+          </Button>
         </Actions>
       </main>
     </Container>
