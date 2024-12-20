@@ -9,18 +9,22 @@ import Routes from './routes';
 import GlobalStyle from './styles/global';
 
 const App: React.FC = () => {
+  const adClient = import.meta.env.VITE_AD_CLIENT;
+  const adSlotHeader = import.meta.env.VITE_AD_SLOT_HEADER;
+  const adSlotFooter = import.meta.env.VITE_AD_SLOT_FOOTER;
+
   return (
     <AppProvider>
       <BrowserRouter>
         <GoogleAdSense
-          adClient="ca-pub-9921352629651452"
-          adSlot="8131822255"
+          adClient={adClient}
+          adSlot={adSlotHeader}
         />
         <Navbar />
         <Routes />
         <GoogleAdSense
-          adClient="ca-pub-9921352629651452"
-          adSlot="2034415246"
+          adClient={adClient}
+          adSlot={adSlotFooter}
         />
         <GlobalStyle />
         <ToastContainer
