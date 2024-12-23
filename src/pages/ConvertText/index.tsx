@@ -4,7 +4,8 @@ import Header from '../../components/Header';
 import Textarea from '../../components/Textarea';
 import { useTextConverter } from '../../hooks/useTextConverter';
 import { trackEvent } from '../../services/google-analytics/googleAnalytics';
-import { Actions, Container, Form } from './styles';
+import { About, Actions, Container, Form } from './styles';
+import Card from '../../components/Card';
 
 const ConvertText: React.FC = () => {
   const {
@@ -128,6 +129,59 @@ const ConvertText: React.FC = () => {
             Limpar
           </Button>
         </Actions>
+        <About>
+          <Card title="Bem-vindo ao Conversor de Texto">
+            <p>Uma ferramenta online prática e intuitiva onde você pode alternar entre letras maiúsculas e minúsculas, capitalizar, decapitalizar, converter para estilos alternados e transformar seu texto de várias formas. Explore as opções abaixo e descubra tudo o que você pode fazer!</p>
+          </Card>
+          <Card title="Formato Frase">
+            <p>Converte o texto para o formato de frase, onde a primeira letra de cada sentença é maiúscula.</p>
+            <p><strong>Exemplo:</strong></p>
+            <p><em>Entrada:</em> o céu está azul. que dia lindo!</p>
+            <p><em>Saída:</em> O céu está azul. Que dia lindo!</p>
+          </Card>
+          <Card title="Palavras Capitalizadas">
+            <p>Torna maiúscula a primeira letra de cada palavra no texto.</p>
+            <p><strong>Exemplo:</strong></p>
+            <p><em>Entrada:</em> bom dia, mundo</p>
+            <p><em>Saída:</em> Bom Dia, Mundo</p>
+          </Card>
+          <Card title="MAIÚSCULAS">
+            <p>Converte todo o texto para letras maiúsculas.</p>
+            <p><strong>Exemplo:</strong></p>
+            <p><em>Entrada:</em> bom dia</p>
+            <p><em>Saída:</em> BOM DIA</p>
+          </Card>
+          <Card title="minúsculas">
+            <p>Converte todo o texto para letras minúsculas.</p>
+            <p><strong>Exemplo:</strong></p>
+            <p><em>Entrada:</em> BOM DIA</p>
+            <p><em>Saída:</em> bom dia</p>
+          </Card>
+          <Card title="lEtRaS AlTeRnAdAs">
+            <p>Alterna entre maiúsculas e minúsculas em cada caracter do texto.</p>
+            <p><strong>Exemplo:</strong></p>
+            <p><em>Entrada:</em> bom dia</p>
+            <p><em>Saída:</em> BoM DiA</p>
+          </Card>
+          <Card title="Inverter Letras">
+            <p>Inverte o caso de cada letra, tornando maiúsculas em minúsculas e vice-versa.</p>
+            <p><strong>Exemplo:</strong></p>
+            <p><em>Entrada:</em> BoM DiA</p>
+            <p><em>Saída:</em> bOm dIa</p>
+          </Card>
+          <Card title="Formato URL">
+            <p>Converte o texto para um formato amigável para URLs, removendo espaços e caracteres especiais.</p>
+            <p><strong>Exemplo:</strong></p>
+            <p><em>Entrada:</em> Olá Mundo!</p>
+            <p><em>Saída:</em> ola-mundo</p>
+          </Card>
+          <Card title="Copiar para a Área de Transferência">
+            <p>Copia o texto processado para a área de transferência do sistema, facilitando o uso em outros aplicativos.</p>
+          </Card>
+          <Card title="Limpar Texto">
+            <p>Remove todo o conteúdo do campo de texto, permitindo que o usuário comece do zero.</p>
+          </Card>
+        </About>
       </main>
     </Container>
   );
