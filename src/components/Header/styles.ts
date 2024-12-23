@@ -21,6 +21,6 @@ export const Container = styled.header`
     margin-top: 1.2rem;
     font-size: 1.5rem;
     line-height: 2.6rem;
-    color: ${(props) => props.theme.colors.titleInPrimary};
+    color: ${(props) => props.theme.colors.textInPrimary};
   }
 `;
