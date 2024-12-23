@@ -12,6 +12,7 @@ const theme = {
     inputPlaceholder: "#f8f8fc",
     inputBackground: "#747D88",
     buttonText: "#f8f8fc",
+    buttonBackground: "#444d57",
   },
 };
 
