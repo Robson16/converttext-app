@@ -13,7 +13,7 @@ export const Container = styled.div`
   h2 {
     font-weight: 700;
     font-size: 1.8rem;
-    line-height: 4.2rem;
+    line-height: 2.6rem;
     color: ${(props) => props.theme.colors.titleInPrimary};
   }
 `;

@@ -25,6 +25,11 @@ export default createGlobalStyle`
    color: ${(props) => props.theme.colors.link};
   }
 
+  ul, ol {
+    padding-left: 2.3rem;
+    margin-bottom: 1rem;
+  }
+
   div,
   body,
   input,
@@ -32,6 +37,7 @@ export default createGlobalStyle`
   textarea {
     font-size: 1.6rem;
     font-weight: 500;
+    line-height: 1.4;
     font-family: 'Ubuntu', sans-serif;
   }
 
