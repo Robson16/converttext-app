@@ -1,11 +1,12 @@
 import React from 'react';
 import Button from '../../components/Button';
+import Card from '../../components/Card';
+import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Textarea from '../../components/Textarea';
 import { useTextConverter } from '../../hooks/useTextConverter';
 import { trackEvent } from '../../services/google-analytics/googleAnalytics';
 import { About, Actions, Container, Form } from './styles';
-import Card from '../../components/Card';
 
 const ConvertText: React.FC = () => {
   const {
@@ -183,6 +184,9 @@ const ConvertText: React.FC = () => {
           </Card>
         </About>
       </main>
+      <Footer>
+
+      </Footer>
     </Container>
   );
 };

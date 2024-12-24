@@ -10,9 +10,6 @@ import initGA from './services/google-analytics/googleAnalytics';
 import GlobalStyle from './styles/global';
 
 const App: React.FC = () => {
-  const adClient = import.meta.env.VITE_AD_CLIENT;
-  const adSlotHeader = import.meta.env.VITE_AD_SLOT_HEADER;
-  const adSlotFooter = import.meta.env.VITE_AD_SLOT_FOOTER;
 
   useEffect(() => {
     initGA();
@@ -21,18 +18,8 @@ const App: React.FC = () => {
   return (
     <AppProvider>
       <BrowserRouter>
-        <GoogleAdSense
-          style={{ display: 'inline-block', width: '960px', height: '90px' }}
-          adClient={adClient}
-          adSlot={adSlotHeader}
-        />
         <Navbar />
         <Routes />
-        <GoogleAdSense
-          style={{ display: 'inline-block', width: '960px', height: '90px' }}
-          adClient={adClient}
-          adSlot={adSlotFooter}
-        />
         <GlobalStyle />
         <ToastContainer
           theme="colored"

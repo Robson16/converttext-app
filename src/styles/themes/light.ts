@@ -3,7 +3,9 @@ const theme = {
 
   colors: {
     background: "#f0f0f7",
+    border: "#1f4a8f",
     primary: "#1f4a8f",
+    link: "#1f4a8f",
     titleInPrimary: "#ffffff",
     textInPrimary: "#ffffff",
     textTitle: "#333333",

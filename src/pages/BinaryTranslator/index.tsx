@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Textarea from '../../components/Textarea';
 import { useTextConverter } from '../../hooks/useTextConverter';
@@ -53,6 +54,9 @@ const BinaryTranslator: React.FC = () => {
           `}
         </p>
       </main>
+      <Footer>
+
+      </Footer>
     </Container>
   );
 };

@@ -21,6 +21,10 @@ export default createGlobalStyle`
     background: ${(props) => props.theme.colors.background};
   }
 
+  a {
+   color: ${(props) => props.theme.colors.link};
+  }
+
   div,
   body,
   input,
