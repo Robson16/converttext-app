@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import GoogleAdSense from './components/GoogleAdSense';
 import Navbar from './components/Navbar';
 import AppProvider from './hooks';
 import Routes from './routes';
