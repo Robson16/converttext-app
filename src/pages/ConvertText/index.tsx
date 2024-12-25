@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 import Textarea from '../../components/Textarea';
 import { useTextConverter } from '../../hooks/useTextConverter';
 import { trackEvent } from '../../services/google-analytics/googleAnalytics';
-import { About, Actions, Container, Form } from './styles';
+import { About, Actions, Container, Form, Main } from './styles';
 
 const ConvertText: React.FC = () => {
   const {
@@ -36,7 +36,7 @@ const ConvertText: React.FC = () => {
           MAIÚSCULAS? Não se preocupe, você não precisa digitar tudo novamente!
         </p>
       </Header>
-      <main>
+      <Main>
         <Form>
           <Textarea
             name="text"
@@ -183,10 +183,8 @@ const ConvertText: React.FC = () => {
             <p>Remove todo o conteúdo do campo de texto, permitindo que o usuário comece do zero.</p>
           </Card>
         </About>
-      </main>
-      <Footer>
-
-      </Footer>
+      </Main>
+      <Footer />
     </Container>
   );
 };
