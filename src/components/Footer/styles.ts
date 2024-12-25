@@ -25,7 +25,5 @@ export const NavLink = styled(Link)`
   text-align: center;
   text-decoration: none;
   border: none;
-
-  &:hover {
-  }
+  color: ${(props) => props.theme.colors.textBase};
 `;
