@@ -106,7 +106,7 @@ const PrivacyPolicy: React.FC = () => {
         </Paragraph>
       </Section>
       <Section>
-        <Title as="h2">Entre em Contato</Title>
+        <Title as="h2">Fale Conosco</Title>
         <Paragraph>
           Se você tiver dúvidas sobre esta política ou sobre o uso de suas
           informações, entre em contato conosco pelo e-mail{" "}
