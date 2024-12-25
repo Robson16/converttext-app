@@ -2,7 +2,15 @@ import {createGlobalStyle} from "styled-components";
 
 export default createGlobalStyle`
   :root {
-    font-size: 60%;
+    /* Ajusta a base do font-size para facilitar cálculo em rem */
+    font-size: 62.5%; /* 1rem = 10px */
+  }
+
+   @media (min-width: 700px) {
+    :root {
+      /* Ajuste para telas maiores */
+      font-size: 65%; /* 1rem = 10.4px */
+    }
   }
 
   * {
@@ -11,41 +19,42 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html,
-  body,
+  html, 
+  body, 
   #root {
-    height: 100vh;
+    height: 100%;
   }
 
   body {
     background: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.textBase};
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.6rem; /* Padrão de 16px */
+    font-weight: 500;
+    line-height: 1.4;
   }
 
   a {
-   color: ${(props) => props.theme.colors.link};
+    color: ${(props) => props.theme.colors.link};
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
-  ul, ol {
+  ul, 
+  ol {
     padding-left: 2.3rem;
     margin-bottom: 1rem;
   }
 
-  div,
-  body,
-  input,
-  button,
+  input, 
+  button, 
   textarea {
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 1.4;
-    font-family: 'Ubuntu', sans-serif;
-  }
-
-  body,
-  input,
-  button,
-  textarea {
-    color: ${(props) => props.theme.colors.textBase};
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
   }
 
   #root {
@@ -55,9 +64,7 @@ export default createGlobalStyle`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
-    @media (min-width: 700px) {
-      font-size: 62.5%;
-    }
   }
+
+ 
 `;
