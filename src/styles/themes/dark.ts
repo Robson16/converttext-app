@@ -2,6 +2,7 @@ const theme = {
   title: "dark",
 
   colors: {
+    placeholder: "#2e333a",
     background: "#30363D",
     border: "#ffffff",
     primary: "#3C444D",

@@ -2,6 +2,7 @@ const theme = {
   title: "light",
 
   colors: {
+    placeholder: "#eaeaf4",
     background: "#f0f0f7",
     border: "#1f4a8f",
     primary: "#1f4a8f",
