@@ -15,6 +15,7 @@ const theme = {
     inputBackground: "#f8f8fc",
     buttonText: "#f8f8fc",
     buttonBackground: "#22519d",
+    shadow: "rgba(0, 0, 0, 0.1)",
   },
 };
 

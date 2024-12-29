@@ -24,7 +24,7 @@ export const NavLink = styled(Link)`
   border-radius: 6px;
   color: ${(props) => props.theme.colors.textInPrimary};
   background-color: ${(props) => props.theme.colors.primary};
-  box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 30px 40px ${(props) => props.theme.colors.shadow};
 
   &:hover {
     text-decoration: none;
