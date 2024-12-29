@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../../components/Card';
 import Footer from '../../components/Footer';
+import GoogleAdSense from '../../components/GoogleAdSense';
 import Header from '../../components/Header';
 import Textarea from '../../components/Textarea';
 import { useTextConverter } from '../../hooks/useTextConverter';
@@ -18,8 +19,16 @@ const BinaryTranslator: React.FC = () => {
     handleBinaryInput,
   } = useTextConverter();
 
+  const adClient = import.meta.env.VITE_AD_CLIENT;
+  const adSlotHeader = import.meta.env.VITE_AD_SLOT_HEADER;
+
   return (
     <Container>
+      <GoogleAdSense
+        style={{ display: 'inline-block', width: '960px', height: '90px' }}
+        adClient={adClient}
+        adSlot={adSlotHeader}
+      />
       <Header>
         <h1>Tradutor Binário</h1>
         <p>

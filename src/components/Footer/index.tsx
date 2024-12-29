@@ -6,7 +6,6 @@ interface FooterProps {
   children?: ReactNode;
 }
 
-
 const Footer: React.FC<FooterProps> = ({ children }) => {
   const adClient = import.meta.env.VITE_AD_CLIENT;
   const adSlotFooter = import.meta.env.VITE_AD_SLOT_FOOTER;
