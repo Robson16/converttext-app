@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Section, Title, Paragraph, Link } from "./styles";
-import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import { Container, Paragraph, Section, Title } from "./styles";
 
 const PrivacyPolicy: React.FC = () => {
   return (
@@ -55,13 +55,13 @@ const PrivacyPolicy: React.FC = () => {
         <Paragraph>
           Para mais informações sobre como o Google utiliza seus dados, acesse
           a{" "}
-          <Link
+          <a
             href="https://policies.google.com/privacy"
             target="_blank"
             rel="noopener noreferrer"
           >
             Política de Privacidade do Google
-          </Link>
+          </a>
           .
         </Paragraph>
       </Section>
@@ -110,7 +110,7 @@ const PrivacyPolicy: React.FC = () => {
         <Paragraph>
           Se você tiver dúvidas sobre esta política ou sobre o uso de suas
           informações, entre em contato conosco pelo e-mail{" "}
-          <Link href="mailto:seuemail@dominio.com">seuemail@dominio.com</Link>.
+          <a href="mailto:seuemail@dominio.com">seuemail@dominio.com</a>.
         </Paragraph>
       </Section>
       <Footer>

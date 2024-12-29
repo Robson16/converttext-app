@@ -15,7 +15,6 @@ export default createGlobalStyle`
 
   * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
   }
 
@@ -31,7 +30,7 @@ export default createGlobalStyle`
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.6rem; /* Padrão de 16px */
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.6;
   }
 
   a {
@@ -43,9 +42,16 @@ export default createGlobalStyle`
     }
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
   ul, 
   ol {
-    padding-left: 2.3rem;
     margin-bottom: 1rem;
   }
 
@@ -60,11 +66,8 @@ export default createGlobalStyle`
   #root {
     margin: 0 auto;
     padding: 1rem;
-    max-width: 960px;
+    max-width: 1140px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
   }
-
- 
 `;
