@@ -110,7 +110,7 @@ const PrivacyPolicy: React.FC = () => {
         <Paragraph>
           Se você tiver dúvidas sobre esta política ou sobre o uso de suas
           informações, entre em contato conosco pelo e-mail{" "}
-          <a href="mailto:seuemail@dominio.com">seuemail@dominio.com</a>.
+          <a href="mailto:contato@converttext.app.br">contato@converttext.app.br</a>.
         </Paragraph>
       </Section>
       <Footer>

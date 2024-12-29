@@ -23,7 +23,7 @@ const About: React.FC = () => {
           Explore todas as funcionalidades disponíveis!
         </Paragraph>
         <Paragraph>
-          Se você tiver sugestões de novas ferramentas que poderiam ser úteis, entre em contato conosco. Ficaremos felizes em ouvir suas ideias e trabalhar para torná-las realidade!
+          Se você tiver sugestões de novas ferramentas que poderiam ser úteis, <a href='mailto:contato@converttext.app.br'>entre em contato conosco.</a> Ficaremos felizes em ouvir suas ideias e trabalhar para torná-las realidade!
         </Paragraph>
       </Section>
       <Footer />
