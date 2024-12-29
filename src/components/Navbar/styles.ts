@@ -5,13 +5,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  grid-gap: 0.8rem;
+  gap: 1.15rem;
+  margin-bottom: 1.15rem;
 `;
 
 export const NavGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
-  grid-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(95px, auto));
+  gap: 1.15rem;
   align-items: center;
   flex: 1;
 `;
@@ -29,5 +30,15 @@ export const NavLink = styled(Link)`
   &:hover {
     text-decoration: none;
     background-color: ${(props) => shade(0.1, props.theme.colors.primary)};
+  }
+`;
+
+export const Label = styled.label`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  span {
+    margin-bottom: 0;
   }
 `;

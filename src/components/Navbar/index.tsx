@@ -4,7 +4,7 @@ import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { useTheme } from '../../hooks/useTheme';
-import { Container, NavGrid, NavLink } from './styles';
+import { Container, Label, NavGrid, NavLink } from './styles';
 
 const Navbar: React.FC = () => {
   const { toggleTheme } = useTheme();
@@ -23,10 +23,7 @@ const Navbar: React.FC = () => {
         <NavLink to="/binary-translator">Tradutor Binário</NavLink>
       </NavGrid>
 
-      <label
-        htmlFor="toggle-theme"
-        style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}
-      >
+      <Label htmlFor="toggle-theme">
         <span>Mudar de tema</span>
         <Switch
           id="toggle-theme"
@@ -46,7 +43,7 @@ const Navbar: React.FC = () => {
           onColor={colors.primary}
           offColor={shade(0.15, colors.background)}
         />
-      </label>
+      </Label>
     </Container>
   );
 };
