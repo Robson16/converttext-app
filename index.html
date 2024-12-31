@@ -41,14 +41,16 @@
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=%VITE_AD_CLIENT%"
       crossorigin="anonymous"
+      data-cookieconsent="marketing"
     ></script>
 
     <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=%VITE_GOOGLE_ANALYTICS_ID%"
+      data-cookieconsent="statistics"
     ></script>
-    <script>
+    <script type="text/javascript" data-cookieconsent="statistics">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
