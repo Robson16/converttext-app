@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     <Container>
       <NavGrid>
         <NavLink to="/">Conversor de Texto</NavLink>
-        <NavLink to="/binary-translator">Tradutor Binário</NavLink>
+        <NavLink to="/tradutor-binario">Tradutor Binário</NavLink>
       </NavGrid>
 
       <Label htmlFor="toggle-theme">

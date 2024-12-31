@@ -11,7 +11,7 @@ const Routes: React.FC = () => (
     <RouteTracker />
     <ReactDOMRoutes>
       <Route path="/" element={<ConvertText />} />
-      <Route path="/binary-translator" element={<BinaryTranslator />} />
+      <Route path="/tradutor-binario" element={<BinaryTranslator />} />
       <Route path="/sobre" element={<About />} />
       <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
     </ReactDOMRoutes>
