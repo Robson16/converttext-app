@@ -16,10 +16,6 @@ const GoogleAdSense: React.FC<GoogleAdProps> = ({
   dataFullWidthResponsive = "true",
   style
 }) => {
-  if (import.meta.env.MODE === "development") {
-    return null;
-  }
-
   useEffect(() => {
     const adContainer = document.querySelector(".adsbygoogle");
 

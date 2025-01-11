@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,32 +9,35 @@ import Routes from './routes';
 import initGA from './services/google-analytics/googleAnalytics';
 import GlobalStyle from './styles/global';
 
-const App: React.FC = () => {
+const helmetContext = {};
 
+const App: React.FC = () => {
   useEffect(() => {
     initGA();
   }, []);
 
   return (
-    <AppProvider>
-      <BrowserRouter>
-        <Navbar />
-        <Routes />
-        <GlobalStyle />
-        <ToastContainer
-          theme="colored"
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
-      </BrowserRouter>
-    </AppProvider>
+    <HelmetProvider context={helmetContext}>
+      <AppProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes />
+          <GlobalStyle />
+          <ToastContainer
+            theme="colored"
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
+        </BrowserRouter>
+      </AppProvider>
+    </HelmetProvider>
   );
 };
 
